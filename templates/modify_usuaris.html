@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify usuaris</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body>
+<h1>Modify Usuaris </h1>
+{% for usuari in usuaris%}
+<h2>{{usuaris.Username}}</h2>
+{%endfor%}
+<form action="/usuaris/{{usuari.id}}/modify" method="POST">
+  <select name="rol">
+  <option value="admin">admin</option>
+  <option value="user">user</option>
+  <input type="submit" >
+</form>
+</body>
+</html>

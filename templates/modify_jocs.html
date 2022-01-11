@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Jocs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body>
+
+<form action="/jocs/{{joc.id}}/modify" method="POST">
+  <input type="text" placeholder="Nom joc" name="nom" value="{{joc.nom}}">
+  <input type="text" placeholder="any_creacio" name="any_llençament" value="{{joc.any_llençament}}">
+  <input type="text" placeholder="Ciutat" name="ciutat" value="{{joc.ciutat}}">
+  <input type="text" placeholder="Empresa" name="empresa" value="{{joc.nom}}">
+  <input type="text" placeholder="Numero de Jugadors" name="numero_de_jugadors" value="{{joc.numero_de_jugadors}}">
+  <input type="file" accept=".png" placeholder="imatge" name="/static/img" value="{{joc.img}}">
+  <input type="submit">
+</form>
+</body>
+</html>

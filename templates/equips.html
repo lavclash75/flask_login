@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equips</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/static/css/css.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body class="bg-color">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{url_for('jugadors')}}">Jugadors</a>
+        <a class="navbar-brand" href="{{url_for('jocs')}}">Jocs</a>
+        <a class="navbar-brand" href="{{url_for('equips')}}">Equips</a>
+        <a class="navbar-brand" href="{{url_for('logout')}}">Logout</a>
+        <a class="navbar-brand" href="{{url_for('mostrarusurais')}}">Usuaris</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    <button >
+        <a href="{{url_for('insert_equips')}}" class="button" >Afegeix Equips</a>
+       </button>
+
+{% for equip in datos %}
+
+<h1 class="blanc">Equip {{equip.nom}}</h1>
+
+<div class="table-responsive marge">
+    <table class="table table-dark">
+
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <td class="centre">{{equip.nom}}</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Any creació</th>
+            <td class="centre">{{equip.any_creacio}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Pressupost</th>
+            <td class="centre">{{equip.pres}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Ciutat</th>
+            <td class="centre">{{equip.ciutat}}</td>
+        </tr>
+        <a href="/equips/{{equip.id}}/delete" class="btn btn-danger" onclick="return confirm('Estas segur')">Delete</a>
+        <a href="/equips/{{equip.id}}/modify" class="btn btn-warning">Modify</a>    
+    </tbody>
+    </table>
+</div>
+
+{% endfor %}
+
+</body>
+</html>

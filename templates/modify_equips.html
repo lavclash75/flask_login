@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify equips</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body>
+<h1>Modify Equips </h1>
+<form action="/equips/{{equip.id}}/modify" method="POST">
+  <input type="text" placeholder="Nom joc" name="nom" value="{{equip.nom}}">
+  <input type="text" placeholder="any_creacio" name="any_creacio" value="{{equip.any_creacio}}">
+  <input type="text" placeholder="Ciutat" name="pressupost" value="{{equip.pressupost}}">
+  <input type="text" placeholder="Empresa" name="ciutat" value="{{equip.ciutat}}">
+  <input type="submit">
+</form>
+</body>
+</html>
