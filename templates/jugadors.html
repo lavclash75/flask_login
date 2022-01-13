@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jugadors</title>
+    <title>Cita Previa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="/static/css/css.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -21,18 +21,18 @@
 </head>
 <body class="bg-color">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{{url_for('jugadors')}}">Jugadors</a>
+        <a class="navbar-brand" href="{{url_for('jugadors')}}">Cita Previa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{{url_for('jocs')}}">Jocs</a>
-        <a class="navbar-brand" href="{{url_for('equips')}}">Equips</a>
-        <a class="navbar-brand" href="{{url_for('logout')}}">Logout</a>
+      <!--  <a class="navbar-brand" href="{{url_for('jocs')}}">Jocs</a>-->
+      <!--  <a class="navbar-brand" href="{{url_for('equips')}}">Equips</a>-->
         <a class="navbar-brand" href="{{url_for('mostrarusurais')}}">Usuaris</a>
+        <a class="navbar-brand" href="{{url_for('logout')}}">Logout</a>
         </div>
       </nav>
     <button >
-     <a href="{{url_for('insert_jugadors')}}" class="button" >Afegeix Jugadors</a>
+     <a href="{{url_for('insert_jugadors')}}" class="button" >Afegeix cita previa</a>
     </button>
 
 {% for jugador in datos %}
@@ -52,7 +52,7 @@
             <td class="centre">{{jugador.anys}}</td>
         </tr>
         <tr>
-            <th scope="row">Equip</th>
+            <th scope="row">Assumpte</th>
             <td class="centre">{{jugador.equip}}</td>
         </tr>
         <tr>
