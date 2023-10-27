@@ -7,4 +7,4 @@ docker build .
 
 docker images 
 
-docker run -d -p 80:5000 <id>
+docker run -d -p 80:5000 <<id>>
