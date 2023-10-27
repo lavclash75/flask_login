@@ -1,7 +1,7 @@
 # flask_login CRUD 
 
 ```bash 
-git clone --single-branch --branch hospital https://github.com/lavclash75/flask_login```
+git clone --single-branch --branch hospital https://github.com/lavclash75/flask_login
 
 cd flask_login
 
