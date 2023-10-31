@@ -6,7 +6,9 @@ git clone --single-branch --branch hospital https://github.com/lavclash75/flask_
 ```bash 
 cd flask_login
 ````
+```bash 
 docker build .
+```
 ```bash 
 docker images
 ```
